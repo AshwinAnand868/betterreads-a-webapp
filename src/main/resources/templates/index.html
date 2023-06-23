@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Demo</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+    <base href="/" />
+    <div th:insert="/components/bootstrap-url :: bootstrap-url-panel"></div>
+
+    <style>
+      .font-20 {
+        font-size: 20px;
+      }
+      .space-line {
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="px-4 py-5 my-5 text-center">  
+      <h1 class="display-5 fw-bold text-body-emphasis space-line">Better Reads</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="font-20 mb-4">Control your reading habit. Track the books you read and fuel your reading.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center space-line">
+          <a href="/oauth2/authorization/github" type="button" class="btn btn-primary btn-lg px-4 gap-3">Login Via GitHub</a>
+        </div>
+      </div>
+      <div class="col-lg-6 mx-auto">
+        <p class="font-20 mb-4">Or Search for a book</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <div th:insert="/components/book-search :: search-panel"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
